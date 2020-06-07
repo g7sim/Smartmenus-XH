@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<?php echo head();?>
+</head>
+
+
+<body <?php echo onload();?>>
+<button onclick="topFunction()" id="myBtn" title="Nach Oben">Nach<br>Oben</button><br>
+<div class="wrap">
+
+<!-- Kopf -->
+<div class=hwrap>
+<div class="head">       <h1><?php echo sitename();?></h1></div>
+<br>
+
+<!-- Navigation -->
+  <nav class="main-nav" role="navigation">	 
+    <div class="nav"> 	<?php echo li($hc, 1);?> 	
+      </div>  
+   
+<div style="clear:both"></div>
+
+<!--Hauptinhalt main-->
+    <div id="content">
+        <p id="languagemenu"><?php echo languagemenu();?></p>
+        <?php echo content()?>
+<!-- Fussnavigation -->	
+
+        <!--Submenu -->
+        <div id="submenu">
+            <!php echo submenu();?>
+        </div>
+    </div>
+
+ <!--Next/Previous Page Navigation-->
+   <center> <table class="subnav">
+        <tr>
+            <td class="previous pre-btn"><?php echo previouspage();?></td>
+            <td class="top"><?php echo top();?></td>
+            <td class="next nxt-btn"><?php echo nextpage();?></td>
+        </tr>
+    </table>
+
+	
+    <div id="copyright">
+        <p>
+        <a href="http://www.cmsimple-xh.org/" target="_blank">Powered by CMSimple_xh</a>
+        &nbsp;  &nbsp; <?php echo loginlink();?>        &nbsp; &nbsp; 
+        </p>
+    </div></center>
+
+</div>
+</div>
+
+<script type="text/javascript"> 
+      $('div.nav ul:first').addClass('sm sm-simple').attr('id', 'main-menu').attr('data-smartmenus-id', '14931313557235457').removeClass('menulevel1');
+</script>
+<script type="text/javascript"> 
+    $('div.nav span:first').addClass('sp2');
+ </script>   
+<script type="text/javascript"> 
+    $('#navigation li').click(function() {
+    $('#navigation li').addClass('selected');
+});
+
+$('.nav li > span').each(function() {
+var $this = $(this);
+$this.replaceWith('<a href="#">' + $this.text() + '</a>');
+});
+</script>
+        
+    <script type="text/javascript" src="<?php echo $pth['folder']['template']?>js/jquery.smartmenus.js"></script>
+    <script type="text/javascript" src="<?php echo $pth['folder']['template']?>js/index.js"></script>
+ <script type="text/javascript" src="<?php echo $pth['folder']['template']?>js/scrolltop.js"></script>
+	 
+
+</body>
+</html>
