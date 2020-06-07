@@ -15,8 +15,14 @@
 
 <!-- Kopf -->
 <div class=hwrap>
-<div class="head">       <h1><?php echo sitename();?></h1></div>
-<br>
+<div class="head">    
+<h1><?php echo sitename();?></h1>
+<!-- Mobile menu toggle button (hamburger/x icon) -->
+<input id="main-menu-state" type="checkbox" />
+<label class="main-menu-btn" for="main-menu-state">
+  <span class="main-menu-btn-icon"></span> Toggle main menu visibility
+</label>
+</div>
 
 <!-- Navigation -->
   <nav class="main-nav" role="navigation">	 
@@ -58,11 +64,9 @@
 </div>
 
 <script type="text/javascript"> 
-      $('div.nav ul:first').addClass('sm sm-simple').attr('id', 'main-menu').attr('data-smartmenus-id', '14931313557235457').removeClass('menulevel1');
+      $('div.nav ul:first').addClass('sm sm-simple').attr('id', 'main-menu');
 </script>
-<script type="text/javascript"> 
-    $('div.nav span:first').addClass('sp2');
- </script>   
+ 
 <script type="text/javascript"> 
     $('#navigation li').click(function() {
     $('#navigation li').addClass('selected');
@@ -74,8 +78,8 @@ $this.replaceWith('<a href="#">' + $this.text() + '</a>');
 });
 </script>
         
-    <script type="text/javascript" src="<?php echo $pth['folder']['template']?>js/jquery.smartmenus.js"></script>
-    <script type="text/javascript" src="<?php echo $pth['folder']['template']?>js/index.js"></script>
+ <script type="text/javascript" src="<?php echo $pth['folder']['template']?>js/jquery.smartmenus.js"></script>
+ <script type="text/javascript" src="<?php echo $pth['folder']['template']?>js/index.js"></script>
  <script type="text/javascript" src="<?php echo $pth['folder']['template']?>js/scrolltop.js"></script>
 	 
 
