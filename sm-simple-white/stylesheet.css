@@ -86,7 +86,7 @@ line-height:35px;text-align: center;vertical-align: middle;text-indent: 20px;}
   text-decoration: none;
 }
 #content {
-   width: 850px;
+  max-width: 850px;
    min-height:600px;
    margin-left: auto;
    margin-right: auto;
